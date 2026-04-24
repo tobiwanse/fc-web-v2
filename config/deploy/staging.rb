@@ -1,11 +1,11 @@
 # config/deploy/staging.rb
 
-server 'localhost', user: 'tobias', roles: %w[app web db], ssh_options: { forward_agent: true }
+server 'uzume.oderland.com', user: 'svfchem1', roles: %w[app web db], ssh_options: { forward_agent: true }
 
 set :branch, 'main'
 set :stage, :staging
 
-set :deploy_to, '/Users/tobias/www/fc-web-v2-staging'
+set :deploy_to, '/homes/svfchem1/sites/fc-v2-test.fallskarmscenter.se'
 
 # server-based syntax
 # ======================

@@ -1,5 +1,5 @@
-require "capistrano/composer"
-require "capistrano/php"
+#require "capistrano/composer"
+#require "capistrano/php"
 # Load DSL and set up stages
 require "capistrano/setup"
 
