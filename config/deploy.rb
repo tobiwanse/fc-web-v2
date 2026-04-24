@@ -2,7 +2,7 @@
 lock "~> 3.20.0"
 
 set :application, "fc-web-v2"
-set :repo_url, "git@github.com:tobiwanse/f"
+set :repo_url, "git@github.com:tobiwanse/fc-web-v2.git"
 
 # Behåll 5 senaste releases (rollback: cap production deploy:rollback)
 set :keep_releases, 5
