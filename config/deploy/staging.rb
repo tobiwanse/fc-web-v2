@@ -1,3 +1,12 @@
+# config/deploy/staging.rb
+
+server 'localhost', user: 'tobias', roles: %w[app web db], ssh_options: { forward_agent: true }
+
+set :branch, 'main'
+set :stage, :staging
+
+set :deploy_to, '/Users/tobias/www/fc-web-v2-staging'
+
 # server-based syntax
 # ======================
 # Defines a single server with a list of roles and multiple properties.

@@ -2,7 +2,25 @@
 lock "~> 3.20.0"
 
 set :application, "fc-web-v2"
-set :repo_url, "git@example.com:me/my_repo.git"
+set :repo_url, "git@github.com:tobiwanse/f"
+
+# Behåll 5 senaste releases (rollback: cap production deploy:rollback)
+set :keep_releases, 5
+
+# Delade filer – skapas en gång i shared/ och symlinkas vid varje deploy
+set :linked_files, %w[.env]
+
+# Delade mappar – bevaras mellan deploys
+set :linked_dirs, %w[web/app/uploads]
+
+# SSH agent forwarding – använder din lokala SSH-nyckel för GitHub-åtkomst på servern
+set :ssh_options, { forward_agent: true }
+
+# Loggnivå (:debug, :info, :warn, :error, :fatal)
+set :log_level, :info
+
+# Tidszonsformat för release-mappar
+set :format_options, command_output: false
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
