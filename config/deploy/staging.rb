@@ -5,7 +5,7 @@ server 'uzume.oderland.com', user: 'svfchem1', roles: %w[app web db], ssh_option
 set :branch, 'main'
 set :stage, :staging
 
-set :deploy_to, '/homes/svfchem1/sites/fc-v2-test.fallskarmscenter.se'
+set :deploy_to, '/home/svfchem1/sites/fc-v2-test.fallskarmscenter.se'
 
 # server-based syntax
 # ======================
@@ -50,11 +50,11 @@ set :deploy_to, '/homes/svfchem1/sites/fc-v2-test.fallskarmscenter.se'
 #
 # Global options
 # --------------
-#  set :ssh_options, {
-#    keys: %w(/home/user_name/.ssh/id_rsa),
-#    forward_agent: false,
-#    auth_methods: %w(password)
-#  }
+ set :ssh_options, {
+   keys: %w(/Users/tobias/.ssh/fc_id_rsa),
+   forward_agent: false,
+  # auth_methods: %w(password)
+ }
 #
 # The server-based syntax can be used to override options:
 # ------------------------------------
