@@ -9,7 +9,7 @@ set :keep_releases, 5
 
 # Delade filer – skapas en gång i shared/ och symlinkas vid varje deploy
 set :linked_files, %w[.env]
-
+set :linked_files, %w[web/.htaccess]
 # Delade mappar – bevaras mellan deploys
 set :linked_dirs, %w[web/app/uploads]
 
